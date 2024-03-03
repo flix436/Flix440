@@ -1,14 +1,14 @@
 {
-  "name": "Flix440", 
+  "name": "Flix438", 
   "version": "1.0.0", 
-  "description": "Tea", 
+  "description": "TeaTea", 
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "" 
+    "url": "https://github.com/flix436/Flix440.git" 
   },
   "keywords": [ 
     "", 

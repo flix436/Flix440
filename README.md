@@ -1,40 +1,53 @@
-# Data Validation Library
+# Validation Library
 
-A lightweight JavaScript library for data validation in Node.js applications.
+This is a simple JavaScript library for validating email addresses, phone numbers, and URLs.
 
 ## Installation
 
-You can install the Data Validation Library via npm:
+You can install this package via npm:
 
 ```bash
-npm install data-validation-library
+npm install validation-library
 ```
 
 ## Usage
 
 ```javascript
-// Require the data validation library
-const dataValidation = require('data-validation-library');
+const validation = require('validation-library');
 
-// Validate string format
-console.log(dataValidation.validateString("hello")); // true
+// Validate email address
+const isValidEmail = validation.validateEmail('example@example.com');
 
-// Validate email format
-console.log(dataValidation.validateEmail("example@email.com")); // true
+// Validate phone number
+const isValidPhoneNumber = validation.validatePhoneNumber('1234567890');
 
-// Validate number format
-console.log(dataValidation.validateNumber(42)); // true
+// Validate URL
+const isValidURL = validation.validateURL('https://www.example.com');
 
-// Validate if a value is within a specified range
-console.log(dataValidation.validateRange(5, 1, 10)); // true
+console.log('Email is valid:', isValidEmail);
+console.log('Phone number is valid:', isValidPhoneNumber);
+console.log('URL is valid:', isValidURL);
 ```
 
-## Functions
+## API
 
-- `validateString(value)`: Validates if the given value is a string.
-- `validateEmail(value)`: Validates if the given value is a valid email address.
-- `validateNumber(value)`: Validates if the given value is a number.
-- `validateRange(value, min, max)`: Validates if the given value is within the specified range.
+### `validateEmail(email: string): boolean`
+
+Validates an email address.
+
+- `email`: The email address to validate.
+
+### `validatePhoneNumber(phoneNumber: string): boolean`
+
+Validates a phone number.
+
+- `phoneNumber`: The phone number to validate.
+
+### `validateURL(url: string): boolean`
+
+Validates a URL.
+
+- `url`: The URL to validate.
 
 ## License
 
